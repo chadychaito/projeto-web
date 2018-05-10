@@ -21,4 +21,8 @@ class PrincipalController extends Controller
 	public function criarclube(){
 		return view('paginas.criar_clube');
 	}
+
+	public function vertime(){
+		return view('paginas.visualizar_time');
+	}
 }

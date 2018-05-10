@@ -15,5 +15,6 @@ Route::get('/index', 'PrincipalController@index');
 Route::get('/login', 'PrincipalController@login');
 Route::get('/welcome', 'PrincipalController@welcome');
 Route::get('/criarclube', 'PrincipalController@criarclube');
+Route::get('/visualizartime', 'PrincipalController@vertime');
 
 

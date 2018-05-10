@@ -1,5 +1,6 @@
 @extends('layout.principal')
 @section('conteudo')
+
 <header>
 	<div class="row">
 		<div class="col-md-6">
@@ -29,7 +30,29 @@
 			</div><!-- .bg-content -->
 		</div><!-- .col -->
 		<div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
-			<h1 class="title">// TIRAR</h1>
+			<h1 class="title">TIMES</h1>
+			<div class="bg-content" id="buscar-content">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-5">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<div class="input-group-text"><i class="fas fa-search"></i></div>
+								</div>
+								<input type="text" class="form-control" id="inlineFormInputGroupTime" placeholder="Buscar Time">
+							</div>
+						</div> <!-- .col -->
+						<div class="col-md-4 offset-3">
+							<form>
+								<div class="form-group">
+									<input type="range" class="custom-range" min="1" max="30" value="15" class="slider" id="formControlRange">
+									<span id="range-days"></span>
+								</div>
+							</form>
+						</div> <!-- .col -->
+					</div><!-- .row -->
+				</div> <!-- .col -->
+			</div><!-- .bg-content -->
 			<div class="bg-content">
 				<div class="col-md-12">
 					<table class="table">
@@ -78,4 +101,20 @@
 		</div><!-- .col -->
 	</div><!-- .row -->
 </div><!-- .container -->
+
+<script type="text/javascript">
+	var slider = document.getElementById("formControlRange");
+	var output = document.getElementById("range-days");
+	
+	//Apresentar o valor Default
+	output.innerHTML = slider.value + " dias atrás";
+
+	//Apresentar o valor depois da alteração
+	slider.oninput = function() {
+		if(this.value == 1)
+			output.innerHTML = this.value + " dia atrás";
+		else
+			output.innerHTML = this.value + " dias atrás";
+	}
+</script>
 @stop
