@@ -1,11 +1,12 @@
 @extends('layout.principal')
 @section('conteudo')
-<div class="row">
-	<div class="col-md-12">
-		<h1 class="title centered">Bem-Vindo, Campeão</h1>
+<div class="row text-center">
+	<div class="col-md-12" id="welcome-content">
+		<h1 class="title">Bem-Vindo, Campeão</h1>
+		<img src="/images/welcome.png">
+		<p>Crie seu clube esportivo, adicione seu escudo e gerencie seu clube do coração!</p>
+		<button type="submit" class="btn btn-green btn-small-width">começar</button>
 	</div>
 </div>
 
-<button type="submit" class="btn btn-green margin-top center">login</button>
-				
 @stop

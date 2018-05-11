@@ -33,9 +33,17 @@
 		<a href="/index" class="logo"><img src="/images/logo.png"></a>
 	</nav>
 	@yield('conteudo')
-	<!--<footer>
-		COPYRIGHT 2018. ALL RIGHTS RESERVED
-		GERENCIADOR DE CLUBE ESPORTIVO. MABE BY CHADY.
-	</footer>-->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 text-left">
+					<p class="text-uppercase font-weight-bold text-footer">Copyright ⓒ 2018. All rights reserved.</p>
+				</div><!-- .col -->
+				<div class="col-md-6 text-right">
+					<p class="text-uppercase font-weight-bold text-footer"> <a href="#">Gerenciador de Clube Esportivo</a>. Mabe by <a href="https://github.com/chadychaito" target="_blank">Chady Chaito.</a></p>
+				</div><!-- .col -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</footer>
 </body>
 </html>
