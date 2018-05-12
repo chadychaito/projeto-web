@@ -111,6 +111,11 @@ div.sep{
 	border-top: 2px solid #E2E2E2;
 	margin: 15px 0	;
 }
+
+#login-content{
+	margin-bottom: 50px;
+}
+
 /* END CONTENTS */
 
 /* FORM-GROUP */
@@ -246,7 +251,7 @@ label{
 
 /* FOOTER */
 footer{
-	margin-top: 20px;
+	margin-top: 50px;
 	background-color: #fff;
 	height: 50px;
 	-webkit-box-shadow: 0px -4px 5px 0px rgba(212,212,212,1);

@@ -9,7 +9,7 @@
 	<div class="row">
 		<div class="col-sm-12 col-md-12 col-lg-12 centered">
 			<div class="col-md-5 col-lg-5 col-xl-5 text-center">
-				<div class="bg-content">
+				<div class="bg-content" id="login-content">
 					<form>
 						<div class="form-group">
 							<label for="exampleInputEmail1">Email</label>
@@ -19,7 +19,7 @@
 							<label for="exampleInputPassword1">Senha</label>
 							<input type="password" class="form-control form-login " id="exampleInputPassword1" placeholder="Password">
 						</div>
-						<button type="submit" class="btn btn margin-top">login</button>
+						<button type="submit" class="btn btn-green margin-top">login</button>
 					</form>
 				</div> <!-- .bg-content -->
 			</div> <!-- .col-md-3 -->

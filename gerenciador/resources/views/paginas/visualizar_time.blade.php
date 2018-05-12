@@ -8,7 +8,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6 col-md-6 col-lg-6">
-			<h2 class="title sub-title"><i class="fas fa-user"></i> Atletas</h1>
+			<h2 class="title sub-title"></i><img src="/images/icons/atletas.png" style="width: 10%;"> Atletas</h1>
 			<div class="bg-content">
 				<table class="table">
 					<thead>
@@ -43,7 +43,7 @@
 			</div>
 		</div><!-- .col-md-12 -->
 		<div class="col-sm-6 col-md-6 col-lg-6">
-			<h2 class="title sub-title"><i class="fas fa-users"></i> Comissão</h1>
+			<h2 class="title sub-title"><img src="/images/icons/comissao.png" style="width: 10%;"> Comissão</h1>
 			<div class="bg-content">
 				<table class="table">
 					<thead>
@@ -80,7 +80,7 @@
 	</div> <!-- .row -->
 	<div class="row">
 		<div class="col-md-6 offset-3">
-			<h2 class="title sub-title"><i class="fas fa-trophy"></i> Campeonatos</h1>
+			<h2 class="title sub-title"><img src="/images/icons/campeonatos.png" style="width: 10%;"> Campeonatos</h1>
 			<div class="bg-content">
 				<table class="table">
 					<thead>
