@@ -5,7 +5,7 @@
 		<h1 class="title">Bem-Vindo, Campeão</h1>
 		<img src="/images/welcome.png">
 		<p>Crie seu clube esportivo, adicione seu escudo e gerencie seu clube do coração!</p>
-		<button type="submit" class="btn btn-green btn-small-width">começar</button>
+		<a href="/criarclube"><button type="submit" class="btn btn-green btn-small-width">começar</button></a>
 	</div>
 </div>
 

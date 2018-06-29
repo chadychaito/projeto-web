@@ -55,7 +55,7 @@
 										</div>
 										<input type="text" class="form-control" name="search" id="inlineFormInputGroupTime" placeholder="Buscar Time">
 									</div>
-									<input type="hidden" name="_token" value="{{csrf_token()}}">		
+									<input type="hidden" name="_token" value="{{csrf_token()}}">	
 								</form>
 						</div> <!-- .col -->
 						<div class="col-md-4 offset-3">
@@ -68,7 +68,7 @@
 								<button type="submit" class="btn btn-success">Pesquisar</button>
 							</form>
 						</div> <!-- .col -->
-						</div><!-- .row -->
+					</div><!-- .row -->
 				</div> <!-- .col -->
 			</div><!-- .bg-content -->
 			<div class="bg-content">
@@ -78,9 +78,10 @@
 							<tr>
 								<th scope="col">#</th>
 								<th scope="col">Nome</th>
-								<th scope="col">Esporte</th>
-								<th scope="col">Categoria</th>
-								<th scope="col"></th>
+								<th scope="col">Especialidade</th>
+								<th scope="col">Cargo</th>
+                                <th scope="col">Esporte</th>
+                                <th scope="col">Categoria</th>
 							</tr>
 						</thead>
 						<tbody id="tabela">
@@ -88,10 +89,11 @@
 							@foreach($times as $time)
 							<tr>
 								<th scope="row">{{$times ->perPage()*($times->currentPage()-1)+$count}}</th>
-								<td>{{$time->nome}}</td>
-								<td>{{$time->esporte}}</td>
-								<td>{{$time->categoria}}</td>
-								<td><a href="/visualizartime?id={{$time->cod_time}}" title="Ver Time"><i class="fas fa-eye"></i></a></td>
+								<td>{{$time->nome_prof}}</td>
+								<td>{{$time->especialidade}}</td>
+								<td>{{$time->cargo}}</td>
+                                <td>{{$time->esporte}}</td>
+                                <td>{{$time->categoria}}</td>
 							</tr>
 							<?php $count++; ?>
 							@endforeach
@@ -105,94 +107,6 @@
 </div><!-- .container -->
 
 <script type="text/javascript" src="/js/rangeControl.js"></script>
-
-<!--<script type="text/javascript">
- 
-	$('#search').on('keyup',function(){
- 		$value=$(this).val();
-		
-		if($value.length > 4){
-			$.ajax({
-				type : 'get',
-				
-				url : '{{URL::to('search')}}',
-				
-				data:{'search':$value},
-				
-				success:function(data){
-					$('#pagination-demo').twbsPagination({
-        				totalPages: data['last_page'],
-        				visiblePages: 6,
-        				next: 'Next',
-        				prev: 'Prev',
-						onPageClick: function (event, page) {
-							if($value.length > 4){
-								$.ajax({
-									type : 'get',
-									
-									url : '{{URL::to('search')}}?page=' + page,
-									
-									data:{'search':$value},
-									
-									success:function(data){ // construir a tabela 
-										$('#page-content').text('Nome Time: ' + data['data'][0]['nome']);
-										for (var i in data['data']){
-											content  = "<tr><td></td>";
-											content += '<td>' + data['data'][i]['nome'] + '</td>';
-											content += '<td>' + data['data'][i]['esporte'] + '</td>';
-											content += '<td>' + data['data'][i]['categoria'] + '</td>';
-											content += "</tr>"
-											$('#tabela').append(content);
-
-										}
-									}
-								});
-							}
-
-						}
-    				});
-
-					//alert('attr ' + data['total'])
-
-					//alert('Qtd linhas ' + data['data'].length)
-					
-				}
-			});
-		}
-	 })
-
- </script>
-  
- <script type="text/javascript">
-  
-	 $.ajaxSetup({ headers: { 'csrftoken' : '{{ csrf_token() }}' } });
-  
- </script>
-
-<style>
-	.wrapper{
-	margin: 60px auto;
-	text-align: center;
-	}
-	h1{
-	margin-bottom: 1.25em;
-	}
-	#pagination-demo{
-	display: inline-block;
-	margin-bottom: 1.75em;
-	}
-	#pagination-demo li{
-	display: inline-block;
-	}
-
-	.page-content{
-	background: #eee;
-	display: inline-block;
-	padding: 10px;
-	width: 100%;
-	max-width: 660px;
-	}
-</style>-->
 
 <script>
 	var slider = document.getElementById("myRange");

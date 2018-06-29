@@ -65,7 +65,6 @@ header .img-thumbnail-info .post{
 	font-family: "Open Sans";
 	font-weight: bold;
 	margin-top: 40px;
-	margin-bottom: 20px;
 	font-size: 30px;
 }
 
@@ -73,17 +72,44 @@ header .img-thumbnail-info .post{
 	font-size: 28px;
 }
 
-.centered {
-  height: 100%;
-  min-height: 100%;
+.sub-title{
+	color: #767676;
+	font-size: 20px;
+}
+
+
+.centered {		
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: center;
   justify-content: center;
 }
 
+.clube-name {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
 
 /* END TITLES */
+
+/* RANGE SLIDER */
+ 
+.ui-slider .ui-btn-inner {
+    padding: 4px 0 0 0 !important;
+}
+ 
+.ui-slider-popup {
+    position: absolute !important;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    font-size: 36px;
+    padding-top: 14px;
+    z-index: 100;
+    opacity: 0.8;
+}
+/* END RANGE SLIDER */
 
 /* CONTENTS */
 .bg-content {
@@ -104,7 +130,6 @@ header .img-thumbnail-info .post{
   height: 80%;
   object-position: center;
   object-fit: cover;
-  transform: translateX(10%);
 }
 
 div.sep{
@@ -119,8 +144,13 @@ div.sep{
 /* END CONTENTS */
 
 /* FORM-GROUP */
-.form-control.form-login{
-	background-color: #c8c8c8;
+.link-login {
+	color: #1b9e46;
+}
+
+.link-login:hover {
+	color: #115b29;
+	text-decoration: none;
 }
 
 label{
@@ -157,6 +187,10 @@ label{
 
 .btn-green.margin-top{
 	margin-top:30px;
+}
+
+.btn-green.center{
+ 	transform: translateX(22%);
 }
 
 .btn-small-width{
@@ -261,8 +295,8 @@ footer{
 
 .text-footer{
 	font-family: "Open sans";
-	font-size: 13px;
-	transform: translateY(80%);
+	font-size: 10px;
+	transform: translateY(140%);
 	vertical-align: middle;
 }
 

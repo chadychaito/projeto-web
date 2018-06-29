@@ -2,7 +2,8 @@
 @section('conteudo')
 <div class="row">
 	<div class="col-md-12">
-		<h1 class="title centered">NOME DO TIME</h1>
+		<h1 class="title centered">{{$time->nome}}</h1>
+		<p class="sub-title centered" id="esporte">{{$profissionais[0]->esporte}} ({{$profissionais[0]->categoria}})</p>
 	</div>
 </div>
 <div class="container">
@@ -14,30 +15,25 @@
 					<thead>
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">First</th>
-							<th scope="col">Last</th>
-							<th scope="col">Handle</th>
+							<th scope="col">Nome</th>
+							<th scope="col">Time</th>
+							<th scope="col">Desempenho</th>
+							<th scope="col"></th>
 						</tr>
 					</thead>
 					<tbody>
+						<?php $count = 1; ?> 
+						@foreach ($atletas as $atleta)
 						<tr>
-							<th scope="row">1</th>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>@mdo</td>
+							<th scope="row">{{$atletas ->perPage()*($atletas->currentPage()-1)+$count}}</th>
+							<td>{{$atleta->nome_atleta}}</td>
+							<td>{{$atleta->cod_time}}</td>
+							<td>{{$atleta->desempenho}}</td>
+							<td><a href="/visualizaratleta?id={{$atleta->cod_atleta}}" title="Ver Time"><i class="fas fa-eye"></i></a></td>
 						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td>@twitter</td>
-						</tr>
+						<?php $count++; ?>
+						@endforeach
+						{{ $atletas->appends(['id'=>$atleta->cod_time])->links() }}
 					</tbody>
 				</table>
 			</div>
@@ -49,30 +45,25 @@
 					<thead>
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">First</th>
-							<th scope="col">Last</th>
-							<th scope="col">Handle</th>
+							<th scope="col">Nome</th>
+							<th scope="col">Cargo</th>
+							<th scope="col">Especialidade</th>
+							<th scope="col"></th>
 						</tr>
 					</thead>
 					<tbody>
+						<?php $count = 1; ?> 
+						@foreach ($profissionais as $profissional)
 						<tr>
-							<th scope="row">1</th>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>@mdo</td>
+							<th scope="row">{{$profissionais ->perPage()*($profissionais->currentPage()-1)+$count}}</th>
+							<td>{{$profissional->nome_prof}}</td>
+							<td>{{$profissional->cargo}}</td>
+							<td>{{$profissional->esporte}}</td>
+							<td><a href="/visualizarprofissional?id={{$profissional->cod_prof}}" title="Ver Time"><i class="fas fa-eye"></i></a></td>
 						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td>@twitter</td>
-						</tr>
+						<?php $count++; ?>
+						@endforeach
+						{{ $profissionais->appends(['id'=>$atleta->cod_time])->links() }}
 					</tbody>
 				</table>	
 			</div> <!-- .bg-content -->
@@ -86,30 +77,20 @@
 					<thead>
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">First</th>
-							<th scope="col">Last</th>
-							<th scope="col">Handle</th>
+							<th scope="col">Nome</th>
+							<th scope="col">Divisão</th>
 						</tr>
 					</thead>
 					<tbody>
+					<?php $count = 1; ?>
+						@foreach ($campeonatos as $campeonato)
 						<tr>
-							<th scope="row">1</th>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>@mdo</td>
+							<th scope="row">{{$campeonatos ->perPage()*($campeonatos->currentPage()-1)+$count}}</th>
+							<td>{{$campeonato->nome_camp}}</td>
+							<td>{{$campeonato->divisao}}</td>
 						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td>@twitter</td>
-						</tr>
+						<?php $count++; ?>
+						@endforeach
 					</tbody>
 				</table>	
 			</div> <!-- .bg-content -->
